@@ -1,22 +1,32 @@
+import java.util.ArrayList;
+
 public class Dzial {
-    String nazwa;
+    private String nazwa;
+    ArrayList<String> sprawdzacz = new ArrayList<>();
 
     private Dzial(String nazwa) {
         this.nazwa = nazwa;
-        try {
-
-        }catch(NotUniqueNameException ex){
-
-            //TODO unikalne nazwy dzialow pracownikow
-
-            throw new NotUniqueNameException("Obiejt o takiej nazwie juz istnieje");
-
         }
-    }
+
 
     public Dzial createDzial(String nazwa){
+
+        sprawdzacz.add(""); //kiepskie rozwiazanie, ale na razie dziala
+        boolean test = sprawdzacz.contains(nazwa);
+        if(test){
+            throw new NotUniqueNameException("Dzial o takiej nazwie istnieje");
+        }
+        else{
+            sprawdzacz.add(nazwa) ;
+        }
         return new Dzial(nazwa);
     }
 
-    //TODO metoda zwracajaca jacy pracownicy sa w dziale
+
+//    public  Pracownik getWorkers(Dzial d) {
+//        TODO metoda zwracajaca jacy pracownicy sa w dziale
+
+//        return 0;
+//    }
+
 }
