@@ -16,7 +16,9 @@ public abstract class Pracownik implements Comparable, Comparator {
         this.nazwisko = nazwisko;
         this.data = data;
         this.dzial = dzial;
+        listaPracownikow.add(this);
     }
+
 
 
     public String getImie() {

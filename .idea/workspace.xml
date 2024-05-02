@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c44c4daf-e35e-458d-9c34-dad2b8ad2d28" name="Changes" comment="Poczatek projektu kwietniowego">
+    <list default="true" id="c44c4daf-e35e-458d-9c34-dad2b8ad2d28" name="Changes" comment="&#10;Update niedziela">
+      <change afterPath="$PROJECT_DIR$/src/Brygada.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Brygadzista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Praca.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Uzytkownik.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Zlecenie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dzial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dzial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pracownik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pracownik.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Specjalista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Specjalista.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +25,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -35,20 +44,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="" />
@@ -66,7 +75,10 @@
       <workItem from="1712043218095" duration="898000" />
       <workItem from="1712391720621" duration="26000" />
       <workItem from="1712486232002" duration="6000" />
-      <workItem from="1712486263962" duration="3812000" />
+      <workItem from="1712486263962" duration="4670000" />
+      <workItem from="1713594811780" duration="24000" />
+      <workItem from="1714381060107" duration="18025000" />
+      <workItem from="1714505060955" duration="793000" />
     </task>
     <task id="LOCAL-00001" summary="Poczatek projektu kwietniowego">
       <option name="closed" value="true" />
@@ -76,7 +88,23 @@
       <option name="project" value="LOCAL" />
       <updated>1712323991978</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&#10;Update niedziela">
+      <option name="closed" value="true" />
+      <created>1712490191977</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712490191977</updated>
+    </task>
+    <task id="LOCAL-00003" summary="&#10;Update niedziela">
+      <option name="closed" value="true" />
+      <created>1712490357893</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712490357893</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,6 +123,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Poczatek projektu kwietniowego" />
-    <option name="LAST_COMMIT_MESSAGE" value="Poczatek projektu kwietniowego" />
+    <MESSAGE value="&#10;Update niedziela" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;Update niedziela" />
   </component>
 </project>

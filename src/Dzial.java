@@ -2,14 +2,14 @@ import java.util.ArrayList;
 
 public class Dzial {
     private String nazwa;
-    ArrayList<String> sprawdzacz = new ArrayList<>();
+    static ArrayList<String> sprawdzacz = new ArrayList<>();
 
     private Dzial(String nazwa) {
         this.nazwa = nazwa;
         }
 
 
-    public Dzial createDzial(String nazwa){
+    public static Dzial createDzial(String nazwa){
 
         sprawdzacz.add(""); //kiepskie rozwiazanie, ale na razie dziala
         boolean test = sprawdzacz.contains(nazwa);
