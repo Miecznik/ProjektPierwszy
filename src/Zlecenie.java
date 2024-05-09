@@ -1,38 +1,49 @@
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.concurrent.Executor;
 
-public class Zlecenie implements Runnable{
+public class Zlecenie implements
+        Runnable
+{
+
+
+    public static int licznik = 0;
+
+    int numer;
 
     ArrayList<Praca> listaPrac;
 
     Brygada brygada;
 
     LocalDateTime dataUtworzenia;
-    Date dataRozpoczecia;
-    Date dataUkonczenia;
+    LocalDateTime dataRozpoczecia;
+    LocalDateTime dataUkonczenia;
 
     boolean plan;
+
 
     enum stanPlanowania {
         PLANOWANE,
         NIEPLANOWANE
     }
 
-    public Zlecenie(ArrayList<Praca> listaPrac, Brygada brygada, Date dataUtworzenia, Date dataRozpoczecia, Date dataUkonczenia, boolean plan) {
-        this.listaPrac = listaPrac;
+    public Zlecenie(ArrayList<Praca> listaPrac, Brygada brygada, Date dataUtworzenia, LocalDateTime dataRozpoczecia, LocalDateTime dataUkonczenia, boolean plan) {
+        this.listaPrac = new ArrayList<Praca>();
         this.brygada = brygada;
         this.dataUtworzenia = LocalDateTime.now();
         this.dataRozpoczecia = dataRozpoczecia;
         this.dataUkonczenia = dataUkonczenia;
         this.plan = false;
+        licznik++;
+        this.numer = licznik;
     }
 
     public<Brygada> Zlecenie(ArrayList<Praca> listaPrac,
                              Brygada brygada,
                              LocalDateTime dataUtworzenia,
-                             Date dataRozpoczecia,
-                             Date dataUkonczenia
+                             LocalDateTime dataRozpoczecia,
+                             LocalDateTime dataUkonczenia
                              ) {
         this.listaPrac = listaPrac;
 
@@ -40,7 +51,7 @@ public class Zlecenie implements Runnable{
         this.dataRozpoczecia = dataRozpoczecia;
         this.dataUkonczenia = dataUkonczenia;
     }
-    public<listaPrac> Zlecenie(ArrayList<Praca> listaPrac, Brygada brygada, LocalDateTime dataUtworzenia, Date dataRozpoczecia, Date dataUkonczenia, boolean plan) {
+    public<listaPrac> Zlecenie(ArrayList<Praca> listaPrac, Brygada brygada, LocalDateTime dataUtworzenia, LocalDateTime dataRozpoczecia, LocalDateTime dataUkonczenia, boolean plan) {
         this.listaPrac = listaPrac;
         this.brygada = brygada;
         this.dataUtworzenia = dataUtworzenia;
@@ -48,7 +59,7 @@ public class Zlecenie implements Runnable{
         this.dataUkonczenia = dataUkonczenia;
         this.plan = plan;
     }
-    public<listaPrac, Brygada> Zlecenie(ArrayList<Praca> listaPrac, Brygada brygada, LocalDateTime dataUtworzenia, Date dataRozpoczecia, Date dataUkonczenia, boolean plan) {
+    public<listaPrac, Brygada> Zlecenie(ArrayList<Praca> listaPrac, Brygada brygada, LocalDateTime dataUtworzenia, LocalDateTime dataRozpoczecia, LocalDateTime dataUkonczenia, boolean plan) {
         this.listaPrac = listaPrac;
 
         this.dataUtworzenia = dataUtworzenia;
@@ -59,15 +70,53 @@ public class Zlecenie implements Runnable{
 
     @Override
     public void run() {
-        try {
-            wait(50);
-            System.out.println("Proba runa udana");
-        } catch (InterruptedException e) {
-            System.out.println(e);
+
+
+        for (Praca p: Praca.listaPrac
+             ) {
+
+
+            p.run();
+            listaPrac.remove(p);
+
+
         }
 
 
     }
 
+    public void execute() {
+        Executor executor = new Invoker();
+        executor.execute( () -> {
+            for (Praca p: Praca.listaPrac
+            ) {
+
+
+                p.run();
+                listaPrac.remove(p);
+
+
+            }
+        });
+    }
+
+
+
+
+
     //TODO Poutworzeniuobiektujestmożliwośćdodaniakolejnychpracpoprzezmetodę.
+
+
+    @Override
+    public String toString() {
+        return "Zlecenie{" +
+                "numer=" + numer +
+                ", listaPrac=" + listaPrac +
+                ", brygada=" + brygada +
+                ", dataUtworzenia=" + dataUtworzenia +
+                ", dataRozpoczecia=" + dataRozpoczecia +
+                ", dataUkonczenia=" + dataUkonczenia +
+                ", plan=" + plan +
+                '}';
+    }
 }

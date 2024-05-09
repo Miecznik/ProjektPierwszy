@@ -1,11 +1,17 @@
 import java.util.ArrayList;
 
 public class Dzial {
+
+    public static int licznik = 0;
+
+    int numer;
     private String nazwa;
     static ArrayList<String> sprawdzacz = new ArrayList<>();
 
     private Dzial(String nazwa) {
         this.nazwa = nazwa;
+        licznik++;
+        this.numer = licznik;
         }
 
 

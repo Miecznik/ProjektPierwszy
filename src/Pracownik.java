@@ -4,6 +4,11 @@ import java.util.Date;
 
 public abstract class Pracownik implements Comparable, Comparator {
 
+
+    public static int licznik = 0;
+
+    int numer;
+
     static ArrayList<Pracownik> listaPracownikow = new ArrayList<>();
 
     protected String imie, nazwisko;
@@ -17,6 +22,8 @@ public abstract class Pracownik implements Comparable, Comparator {
         this.data = data;
         this.dzial = dzial;
         listaPracownikow.add(this);
+        licznik++;
+        this.numer = licznik;
     }
 
 
@@ -56,5 +63,16 @@ public abstract class Pracownik implements Comparable, Comparator {
         return Comparator.comparing(Pracownik::getImie)
                 .thenComparing(Pracownik::getNazwisko)
                .compare(this, (Pracownik) o);
+    }
+
+    @Override
+    public String toString() {
+        return "Pracownik{" +
+                "numer=" + numer +
+                ", imie='" + imie + '\'' +
+                ", nazwisko='" + nazwisko + '\'' +
+                ", data=" + data +
+                ", dzial=" + dzial +
+                '}';
     }
 }

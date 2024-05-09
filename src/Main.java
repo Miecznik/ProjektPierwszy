@@ -13,7 +13,16 @@ public class Main {
 
         // tworzenie prac
 
-        Praca praca1 = new Praca(10, false, "Budowa segmentu");
+        Praca praca1 = new Praca(10, "Sprzatanie placu budowy", Praca.RodzajPracy.DEMONTAZ  );
+        Praca praca2 = new Praca(100,"Ogrodzenie", Praca.RodzajPracy.MONTAZ);
+        Praca praca3 = new Praca(1000, "Prace Ziemne", Praca.RodzajPracy.OGOLNA );
+        Praca praca4 = new Praca(1000, "Zwozenie piachu", Praca.RodzajPracy.OGOLNA );
+        Praca praca5 = new Praca(1000, "Stawianie Kontenerow Pracowniczych", Praca.RodzajPracy.MONTAZ );
+        Praca praca6 = new Praca(1000, "Kable", Praca.RodzajPracy.MONTAZ );
+        Praca praca7 = new Praca(1000, "Fundament", Praca.RodzajPracy.MONTAZ );
+
+
+
 
         //tworzenie dzialow
         Dzial murarze = Dzial.createDzial("Murarze");
@@ -45,9 +54,22 @@ public class Main {
         brygada2.addPracownik(pracownik4);
         brygada2.addPracownik(pracownik6);
 
+        //dodawanie listy prac
+
+        //podwojne dodawanie, takze odkomentowuje
+        //Praca.listaPrac.add(praca1);
+        //Praca.listaPrac.add(praca2);
+        //Praca.listaPrac.add(praca3);
+
         //dadawanie zlecenia
 
-        Zlecenie zlecenie1 = new Zlecenie(Praca.listaPrac, brygada1, new Date(), null, null, false);
+        Zlecenie zlecenie1 = new Zlecenie(Praca.listaPrac, brygada1, new Date(), LocalDateTime.now(), null, false);
+
+
+
+
+
+        zlecenie1.execute();
 
 
 
